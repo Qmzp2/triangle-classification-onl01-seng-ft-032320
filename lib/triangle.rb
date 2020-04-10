@@ -17,13 +17,19 @@ class Triangle
    elsif (@length1+@length2 <= @length3) || (@length1+@length3 <= @length2) || (@length2+@length3 <= @length1)
    raise TriangleError
  else
-   
-   
- end
- 
- class TriangleError < StandardError
-   
- end
- 
- 
+      if (@length1 == @length2) && (@side_2 == @side_3)
+        :equilateral
+      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+        :isosceles
+      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+        :scalene
+      end
+    end
+
+  end
+
+end
+
+class TriangleError < StandardError
+  # triangle error code
 end
