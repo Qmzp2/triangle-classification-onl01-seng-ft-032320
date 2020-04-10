@@ -12,7 +12,8 @@ class Triangle
  end
  
  def kind()
-   if @all_lengths
+   if @all_lengths.any?{|length| length == 0}
+     
    
  end
  
