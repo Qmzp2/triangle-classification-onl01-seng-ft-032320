@@ -6,7 +6,9 @@ class Triangle
     @length3 = length3
   end
 
-
+def kosher_triangle 
+    length1.positive? && length2.positive? && length3.positive?
+  end 
 
 
 
@@ -26,9 +28,7 @@ class Triangle
     end 
   end
   
-  def kosher_triangle 
-    length1.positive? && length2.positive? && length3.positive?
-  end 
+  
   
   def kosher_triangle2 
     length1 + length2 > length3 && length1 + length3 > length2 && length2 + length3 > length1
