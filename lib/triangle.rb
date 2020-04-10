@@ -15,7 +15,7 @@ class Triangle
     
     if length1 == length2 && length2 == z && length1 == z
       :equilateral
-    elsif length1 != length2 && y != z && z != length1
+    elsif length1 != length2 && length2 != z && z != length1
       :scalene 
     else 
       :isosceles
@@ -23,11 +23,11 @@ class Triangle
   end
   
   def kosher_triangle 
-    length1.positive? && y.positive? && z.positive?
+    length1.positive? && length2.positive? && z.positive?
   end 
   
   def kosher_triangle2 
-    length1 + y > z && length1 + z > y && y + z > length1
+    length1 + length2 > z && length1 + z > length2 && length2 + z > length1
   end 
   
 class TriangleError < StandardError
