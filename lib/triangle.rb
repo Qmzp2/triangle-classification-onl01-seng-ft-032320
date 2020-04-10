@@ -6,16 +6,16 @@ class Triangle
     @length3 = length3
   end
 
-def kosher_triangle 
+def valid_sides
     length1.positive? && length2.positive? && length3.positive?
   end 
 
-def kosher_triangle2 
+def valid_lengths 
     length1 + length2 > length3 && length1 + length3 > length2 && length2 + length3 > length1
   end 
 
   def kind
-    if kosher_triangle == true && kosher_triangle2 == true 
+    if valid_sides == true && valid_lengths == true 
       puts true 
     else 
       raise TriangleError 
