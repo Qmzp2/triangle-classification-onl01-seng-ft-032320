@@ -13,7 +13,7 @@ class Triangle
       raise TriangleError 
     end 
     
-    if length1 == length2 && y == z && length1 == z
+    if length1 == length2 && length2 == z && length1 == z
       :equilateral
     elsif length1 != y && y != z && z != length1
       :scalene 
