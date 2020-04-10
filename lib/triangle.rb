@@ -1,13 +1,4 @@
 class Triangle
- attr_accessor :length1, :length2, :length3
- 
- def initialize(length1, length2, length3)
-   @length3 = length3
-   @length2 = length2
-   @length1 = length1
-   @all_lengths = []
-   @all_lengths << @length1 
-   @all_lengths << @length2class Triangle
   attr_reader :a, :b, :c
   def initialize(a, b, c)
     @a = a
@@ -39,29 +30,4 @@ class Triangle
 end
 
 class TriangleError < StandardError
-end
-   @all_lengths << @length3
- end
- 
- def kind()
-   if @all_lengths.any?{|length| length == 0}
-     raise TriangleError
-   elsif (@length1+@length2 <= @length3) || (@length1+@length3 <= @length2) || (@length2+@length3 <= @length1)
-   raise TriangleError
- else
-      if (@length1 == @length2) && (@length2 == @length3)
-        :equilateral
-      elsif (@length1 == @length2) || (@length2 == @length3) || (@length1 == @length3)
-        :isosceles
-      elsif (@length1 != @length2) && (@length2 != @length3) && (@length1 != @length3)
-        :scalene
-      end
-    end
-
-  end
-
-end
-
-class TriangleError < StandardError
-  
 end
