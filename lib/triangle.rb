@@ -11,7 +11,7 @@ class Triangle
    @all_lengths << @length3
  end
  
- def kind()
+ def kind
    if @all_lengths.any?{|length| length <= 0}
      begin
      raise TriangleError
