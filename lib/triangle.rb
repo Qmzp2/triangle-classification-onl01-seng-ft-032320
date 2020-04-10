@@ -13,9 +13,15 @@ class Triangle
  
  def kind()
    if @all_lengths.any?{|length| length <= 0}
+     begin
      raise TriangleError
+     rescue TriangleError => error
+   end
    elsif (@length1+@length2 <= @length3) || (@length1+@length3 <= @length2) || (@length2+@length3 <= @length1)
-   raise TriangleError
+    begin
+     raise TriangleError
+     rescue TriangleError => error
+   end
  else
       if (@length1 == @length2) && (@length2 == @length3)
         :equilateral
