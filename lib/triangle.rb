@@ -12,7 +12,7 @@ class Triangle
  end
  
  def kind
-   if @all_lengths.any?{|length| length <= 0}
+   if @all_lengths.any?{|length| length == 0}
      begin
      raise TriangleError
      rescue TriangleError => error
