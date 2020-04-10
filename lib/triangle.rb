@@ -10,7 +10,9 @@ def kosher_triangle
     length1.positive? && length2.positive? && length3.positive?
   end 
 
-
+def kosher_triangle2 
+    length1 + length2 > length3 && length1 + length3 > length2 && length2 + length3 > length1
+  end 
 
   def kind
     if kosher_triangle == true && kosher_triangle2 == true 
@@ -30,9 +32,7 @@ def kosher_triangle
   
   
   
-  def kosher_triangle2 
-    length1 + length2 > length3 && length1 + length3 > length2 && length2 + length3 > length1
-  end 
+  
   
 class TriangleError < StandardError
   
