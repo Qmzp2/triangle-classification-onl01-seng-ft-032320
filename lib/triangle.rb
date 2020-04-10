@@ -1,9 +1,9 @@
 class Triangle
   attr_accessor :length1, :length2, :length3
-  def initialize(length1, length2, z)
+  def initialize(length1, length2, length3)
     @length1 = length1
     @length2 = length2
-    @z = z
+    @length = length3
   end
 
   def kind
@@ -13,9 +13,9 @@ class Triangle
       raise TriangleError 
     end 
     
-    if length1 == length2 && length2 == z && length1 == z
+    if length1 == length2 && length2 == length3 && length1 == length3
       :equilateral
-    elsif length1 != length2 && length2 != z && z != length1
+    elsif length1 != length2 && length2 != length3 && length3 != length1
       :scalene 
     else 
       :isosceles
@@ -23,11 +23,11 @@ class Triangle
   end
   
   def kosher_triangle 
-    length1.positive? && length2.positive? && z.positive?
+    length1.positive? && length2.positive? && length3.positive?
   end 
   
   def kosher_triangle2 
-    length1 + length2 > z && length1 + z > length2 && length2 + z > length1
+    length1 + length2 > length3 && length1 + length3 > length2 && length2 + length3 > length1
   end 
   
 class TriangleError < StandardError
