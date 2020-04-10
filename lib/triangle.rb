@@ -7,4 +7,6 @@ class Triangle
    @length1 = length1
  end
  
+ 
+ 
 end
