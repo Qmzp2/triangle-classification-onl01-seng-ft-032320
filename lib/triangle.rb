@@ -6,6 +6,10 @@ class Triangle
     @length3 = length3
   end
 
+
+
+
+
   def kind
     if kosher_triangle == true && kosher_triangle2 == true 
       puts true 
