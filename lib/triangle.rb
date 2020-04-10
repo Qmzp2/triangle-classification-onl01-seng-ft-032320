@@ -7,6 +7,13 @@ class Triangle
    @length1 = length1
  end
  
+ def kind
+   
+ end
+ 
+ class TriangleError < StandardError
+   
+ end
  
  
 end
