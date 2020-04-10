@@ -13,7 +13,8 @@ class Triangle
  
  def kind()
    if @all_lengths.any?{|length| length == 0}
-     
+     raise TriangleError
+   elsif
    
  end
  
