@@ -30,14 +30,14 @@ class Triangle
     x + y > z && x + z > y && y + z > x
   end 
   
+  class TriangleError < StandardError
   
+end
   
   
 end
 
-class TriangleError < StandardError
-  
-end
+
 
 a = Triangle.new(5, 5, 5)
 a.kind
